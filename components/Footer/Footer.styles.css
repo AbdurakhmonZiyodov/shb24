@@ -1,0 +1,31 @@
+.footer {
+    @apply flex flex-col;
+}
+
+.footer__top {
+    @apply flex;
+}
+
+.footer__bg {
+    @apply w-full h-[180px] bg-[url('/bg-image.jpg')] bg-no-repeat bg-[right_top_0] bg-[#FFCF01];
+}
+
+.footer__bg-image-container {
+    @apply w-[150px] h-[40px] relative;
+}
+
+.footer__bg-image {
+    @apply object-cover hover:transition-all hover:shadow-lg;
+}
+
+.footer__center {
+    @apply py-10 flex flex-col gap-5 text-sm text-slate-800 font-medium;
+}
+
+.footer__bottom-container {
+    @apply bg-slate-100;
+}
+
+.footer__bottom-white {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 text-sm font-medium text-slate-900 gap-2 text-center lg:text-start py-3;
+}
