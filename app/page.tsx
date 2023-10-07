@@ -1,10 +1,29 @@
-import { Carousel, Container } from "@/components";
-import React from "react";
+import { Container, ICarousel } from "@/components";
+import { AdvertisementCarouselItem } from "@/types";
 
-const page = () => {
+
+const advertisementList:AdvertisementCarouselItem[] = [
+  {
+    id:0,
+    imgUrl:'/big-slide-1.jpeg',
+  },
+  {
+    id:1,
+    imgUrl:'/big-slide-2.jpeg',
+  },
+  {
+    id:2,
+    imgUrl:'/big-slide-3.jpeg',
+  }
+]
+
+const page =  () => {
+
   return (
    <Container>
-    <Carousel/>
+      <div className="py-4">
+        <ICarousel.Advertisement data={advertisementList}/>
+      </div>
    </Container>
   );
 };

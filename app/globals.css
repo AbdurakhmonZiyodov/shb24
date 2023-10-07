@@ -19,6 +19,12 @@
   }
 }
 
+.swiper-pagination-bullet {
+  @apply w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 !important;
+}
+
+
 
 @import url('../components/Header/Header.styles.css');
 @import url('../components/Footer/Footer.styles.css');
+@import url('../components/ICarousel/AdvertisementCarousel/AdvertisementCarousel.styles.css');

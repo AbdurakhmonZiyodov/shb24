@@ -38,7 +38,7 @@ const Footer = () => {
                 <Link href={'/'}>
                 <div className="footer__bg-image-container">
                   <Image
-                  src={"/google-p.svg"}
+                  src={"/google-play-store.svg"}
                   fill
                   className="footer__bg-image"
                   alt="shb24 goole play"
@@ -49,7 +49,7 @@ const Footer = () => {
               <Link href={'/'}>
                 <div className="footer__bg-image-container">
                   <Image
-                  src={"/apple.svg"}
+                  src={"/apple-play-store.svg"}
                   fill
                   className="footer__bg-image"
                   alt="shb24 app store"

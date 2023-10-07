@@ -1,0 +1,11 @@
+.adswiper__btn {
+    @apply absolute hidden lg:flex inset-y-1/2 z-10 w-[40px] h-[40px] items-center justify-center rounded-full border-2 border-primary-blue hover:bg-primary-blue hover:transition-all cursor-pointer;
+}
+
+.adswiper__btn-icon {
+    @apply text-primary-blue text-[27px] group-hover:text-white group-hover:transition-all;
+}
+
+.adswiper__item {
+    @apply w-full h-[120px] sm:h-[250px] lg:h-[300px] xl:h-[350px] relative;
+}
