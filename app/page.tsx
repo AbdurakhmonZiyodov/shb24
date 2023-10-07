@@ -1,4 +1,4 @@
-import { Container, ICarousel } from "@/components";
+import { CategorySection, Container, ICarousel } from "@/components";
 import { AdvertisementCarouselItem } from "@/types";
 
 
@@ -23,6 +23,10 @@ const page =  () => {
    <Container>
       <div className="py-4">
         <ICarousel.Advertisement data={advertisementList}/>
+      </div>
+
+      <div className="py-6">
+        <CategorySection/>
       </div>
    </Container>
   );
