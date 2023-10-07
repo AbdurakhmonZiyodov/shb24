@@ -1,12 +1,10 @@
-import { Container } from "@/components";
+import { Carousel, Container } from "@/components";
 import React from "react";
 
 const page = () => {
   return (
    <Container>
-    <p>
-      page
-    </p>
+    <Carousel/>
    </Container>
   );
 };
