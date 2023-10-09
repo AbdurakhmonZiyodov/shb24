@@ -1,8 +1,10 @@
 import Advertisement from "./AdvertisementCarousel";
+import Responsive from "./ResponsiveCarousel";
 
 
 const ICarousel =  {
-    Advertisement
+    Advertisement,
+    Responsive
 }
 
 

@@ -1,5 +1,5 @@
 .i__prodct {
-    @apply min-h-[335px] shadow-md w-[216px] flex flex-col relative border border-slate-100 rounded items-center text-center;
+    @apply min-h-[335px] shadow-md w-[210px] flex flex-1 mx-auto flex-col relative border border-slate-100 rounded items-center text-center transition-all duration-300 hover:shadow-xl my-10;
 }
 
 .i__product-badge {
@@ -15,7 +15,7 @@
 }
 
 .i__product-footer {
-    @apply flex flex-1 items-end w-full justify-between px-2 pb-2 gap-3;
+    @apply flex flex-1 items-end w-full justify-between px-1 pb-2 gap-3;
 }
 
 .i__product-footer main {
