@@ -5,22 +5,25 @@ const CategorySection = () => {
 
     return (
         <div className="category__list">
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
+            <CategoryItem />
         </div>
     )
 }
 
-const CategoryItem = () => (
+export const CategoryItem = () => (
     <div className="category__item">
         <Image
             src={'/1552751682.png'}

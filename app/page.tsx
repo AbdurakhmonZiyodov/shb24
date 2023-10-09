@@ -1,4 +1,4 @@
-import { CategorySection, Container, ICarousel } from "@/components";
+import { CategorySection, Container, ICarousel , BaseTitle, ProductCard} from "@/components";
 import { AdvertisementCarouselItem } from "@/types";
 
 
@@ -26,8 +26,13 @@ const page =  () => {
       </div>
 
       <div className="py-6">
+        <BaseTitle className="text-my-green">
+        ТОВАРЛАР КАТЕГОРИЯСЫ
+        </BaseTitle>
         <CategorySection/>
       </div>
+
+      <ProductCard/>
    </Container>
   );
 };

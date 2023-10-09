@@ -1,0 +1,35 @@
+.i__prodct {
+    @apply min-h-[335px] shadow-md w-[216px] flex flex-col relative border border-slate-100 rounded items-center text-center;
+}
+
+.i__product-badge {
+    @apply absolute left-2 top-2 bg-my-red text-xs w-8 h-8 rounded-full flex items-center justify-center text-white font-medium;
+}
+
+.i__product-title {
+    @apply text-base font-medium text-slate-700;
+}
+
+.i__product-price {
+    @apply text-sm font-normal text-slate-700;
+}
+
+.i__product-footer {
+    @apply flex flex-1 items-end w-full justify-between px-2 pb-2 gap-3;
+}
+
+.i__product-footer main {
+    @apply flex items-center w-2/4 justify-center border-2 border-orange-500 rounded-md;
+}
+
+.i__product-footer main button {
+    @apply w-8 bg-my-green text-white flex items-center justify-center rounded py-1 transition-transform duration-200 ease-in-out hover:scale-x-[1.01] hover:scale-y-[1.07];
+}
+
+.i__product-count {
+    @apply text-lg font-medium flex w-12 items-center justify-center text-center;
+}
+
+.i__product-basket_btn {
+    @apply lowercase text-white bg-my-green font-bold px-1 w-2/4 py-1 h-8 rounded outline-none border-none transition-transform duration-200 ease-in-out hover:scale-[1.02];
+}

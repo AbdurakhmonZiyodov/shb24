@@ -4,5 +4,5 @@
 
 
 .category__item {
-    @apply flex flex-col items-center justify-center bg-white shadow-md transition-all duration-300 hover:shadow-lg text-base font-medium h-[200px] rounded-md max-w-[160px] text-center cursor-pointer text-slate-500 border border-slate-100 hover:border-slate-300 hover:text-slate-600;
+    @apply flex flex-col items-center justify-center bg-white shadow-md transition-all duration-300 hover:shadow-2xl text-base font-medium h-[200px] rounded-md max-w-[160px] text-center cursor-pointer text-slate-500 border border-slate-100 hover:border-slate-300 hover:text-slate-600;
 }
