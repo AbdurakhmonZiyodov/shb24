@@ -10,3 +10,14 @@ export interface AdvertisementCarouselItem {
 export interface AdvertisementCarouselProps {
   data:AdvertisementCarouselItem[];
 }
+
+export interface CategoryItemPageProps {
+  params: {
+        id: string;
+    }
+}
+
+export interface CategoryItemProps {
+  id?:string | number;
+}
+

@@ -1,0 +1,29 @@
+/* categoryItem */
+
+
+
+.categoryItem {
+    @apply py-4;
+}
+
+.categoryItem__base-title {
+    @apply transition-colors text-base text-black-100 font-medium hover:text-primary-blue;
+}
+
+.categoryItem__header {
+    @apply flex items-center py-3 gap-3;
+}
+
+
+.categoryItem__category-section {
+    @apply hidden lg:flex flex-col w-1/4 border py-4 px-3 gap-2 rounded-md;
+}
+
+
+.categoryItem__main {
+    @apply flex;
+}
+
+.categoryItem__category-list {
+    @apply flex flex-wrap lg:w-3/4 gap-3 pl-4;
+}

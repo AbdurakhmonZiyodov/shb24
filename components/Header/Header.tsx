@@ -8,10 +8,10 @@ import { FaChevronDown, FaSearch } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { SlBasket } from "react-icons/sl";
 import { BiMenu } from "react-icons/bi";
-import {IoMdCloseCircle} from 'react-icons/io'
+import { IoMdCloseCircle } from 'react-icons/io'
 import useVisibility from "@/hooks/useVisibility";
 
-const menuList = [
+const categoryList = [
   "Суў ҳәм ишимликлер",
   "Майек ҳәм сүт өнимлери",
   "Гөш ҳәм колбаса өнимлери",
@@ -55,76 +55,75 @@ const Header = () => {
           {
             !searchBarVisiblity.visible ? (
               <div className={`header__container transition-all`}>
-            <div className="flex items-center lg:flex-1">
-              <div className="header__logo">
-                  <Image
-                  width={35}
-                  height={35}
-                  alt="shb24 logo"
-                  className="object-contain"
-                  src={
-                    "https://shb24.uz/uploads/logotype/1/original/1541852283.png"
-                  }
-                />
+                <div className="flex items-center lg:flex-1">
+                  <div className="header__logo">
+                    <Image
+                      width={35}
+                      height={35}
+                      alt="shb24 logo"
+                      className="object-contain"
+                      src={
+                        "https://shb24.uz/uploads/logotype/1/original/1541852283.png"
+                      }
+                    />
 
-                <Link href={"/"} className="header__logo-text">
-                  SharBazar
-                </Link>
+                    <Link href={"/"} className="header__logo-text">
+                      SharBazar
+                    </Link>
+                  </div>
+
+                  <div className="header__select">
+                    <Menu>
+                      <Menu.Button className={"header__menu-title"}>
+                        <div className="max-lg:hidden flex flex-row items-center">
+                          <span>Бәрше товарлар</span>{" "}
+                          <FaChevronDown className="text-lg text-slate-500 ml-1" />
+                        </div>
+                        <div className="lg:hidden">
+                          <div className="px-3 py-2">
+                            <BiMenu className="text-[30px]" />
+                          </div>
+                        </div>
+                      </Menu.Button>
+                      <Menu.Items className={"header__menu-list"}>
+                        {categoryList.map((value, index) => (
+                          <Menu.Item key={value}>
+                            {({ active }) => (
+                              <Link
+                                className={`header__menu-item ${active && "bg-blue-500"
+                                  }`}
+                                href={`/category/${index + 1}`}
+                              >
+                                {value}
+                              </Link>
+                            )}
+                          </Menu.Item>
+                        ))}
+                      </Menu.Items>
+                    </Menu>
+                  </div>
+
+                  <div className="header__search">
+                    <input
+                      type="text"
+                      className="header__search-input"
+                      placeholder="Товарларды излеў"
+                    />
+                    <BsSearch className="text-lg text-slate-500 hover:-translate-y-0.5 transition cursor-pointer" />
+                  </div>
+                </div>
+
+                <div className="header__basket">
+                  <button type="button" onClick={searchBarVisiblity.toggle}>
+                    <FaSearch className="text-[22px] text-slate-700 hover:-translate-y-0.5 transition cursor-pointer mr-2 lg:hidden" />
+                  </button>
+                  <button type="button" className="header__basket-btn">
+                    <SlBasket className="mr-1" /> <span className="max-md:hidden">Корзина</span>{" "}
+                    <span className="header__basket-count">2</span>
+                  </button>
+                </div>
               </div>
-
-              <div className="header__select">
-                <Menu>
-                  <Menu.Button className={"header__menu-title"}>
-                    <div className="max-lg:hidden flex flex-row items-center">
-                      <span>Бәрше товарлар</span>{" "}
-                      <FaChevronDown className="text-lg text-slate-500 ml-1" />
-                    </div>
-                    <div className="lg:hidden">
-                      <div className="px-3 py-2">
-                        <BiMenu className="text-[30px]" />
-                      </div>
-                    </div>
-                  </Menu.Button>
-                  <Menu.Items className={"header__menu-list"}>
-                    {menuList.map((value) => (
-                      <Menu.Item key={value}>
-                        {({ active }) => (
-                          <Link
-                            className={`header__menu-item ${
-                              active && "bg-blue-500"
-                            }`}
-                            href="/"
-                          >
-                            {value}
-                          </Link>
-                        )}
-                      </Menu.Item>
-                    ))}
-                  </Menu.Items>
-                </Menu>
-              </div>
-
-              <div className="header__search">
-                <input
-                  type="text"
-                  className="header__search-input"
-                  placeholder="Товарларды излеў"
-                />
-                <BsSearch className="text-lg text-slate-500 hover:-translate-y-0.5 transition cursor-pointer" />
-              </div>
-            </div>
-
-            <div className="header__basket">
-              <button type="button" onClick={searchBarVisiblity.toggle}>
-                <FaSearch className="text-[22px] text-slate-700 hover:-translate-y-0.5 transition cursor-pointer mr-2 lg:hidden" />
-              </button>
-              <button type="button" className="header__basket-btn">
-                <SlBasket className="mr-1" /> <span className="max-md:hidden">Корзина</span>{" "}
-                <span className="header__basket-count">2</span>
-              </button>
-            </div>
-          </div>
-            ): (
+            ) : (
               <div className="flex transition-all flex-1 items-center gap-2 bg-white rounded px-2 py-1 xl:ml-4 lg:mx-4 relative mr-7">
                 <input
                   type="text"
@@ -137,11 +136,11 @@ const Header = () => {
                   <IoMdCloseCircle className="text-[24px] text-slate-700" />
                 </button>
               </div>
-              
+
             )
           }
 
-          
+
         </Container>
       </header>
     </>
