@@ -7,7 +7,7 @@ import {FaMinus, FaPlus} from 'react-icons/fa'
 import useCounter from "@/hooks/useCounter";
 
 const BasketModal = () => {
-    const visiblity = useVisibility(true)
+    const visiblity = useVisibility(false)
 
     
     return (
