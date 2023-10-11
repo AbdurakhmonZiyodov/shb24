@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 
-import { Footer, Header } from "@/components";
+import {Footer, Header} from "@/components";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
