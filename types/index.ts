@@ -21,3 +21,7 @@ export interface CategoryItemProps {
   id?:string | number;
 }
 
+export enum ModalOption {
+  none,
+  basket  
+}

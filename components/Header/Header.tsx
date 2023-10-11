@@ -10,6 +10,9 @@ import { SlBasket } from "react-icons/sl";
 import { BiMenu } from "react-icons/bi";
 import { IoMdCloseCircle } from 'react-icons/io'
 import useVisibility from "@/hooks/useVisibility";
+import { ModalOption } from "@/types";
+import useRootStore from "@/hooks/useRootStore";
+import { observer } from "mobx-react-lite";
 
 const categoryList = [
   "Суў ҳәм ишимликлер",
@@ -32,6 +35,12 @@ const categoryList = [
 
 const Header = () => {
   const searchBarVisiblity = useVisibility();
+  const { run } = useRootStore().modal;
+
+  const showBasket = () => {
+    run(ModalOption.basket);
+  }
+
   return (
     <>
       <Container>
@@ -117,7 +126,7 @@ const Header = () => {
                   <button type="button" onClick={searchBarVisiblity.toggle}>
                     <FaSearch className="text-[22px] text-slate-700 hover:-translate-y-0.5 transition cursor-pointer mr-2 lg:hidden" />
                   </button>
-                  <button type="button" className="header__basket-btn">
+                  <button type="button" className="header__basket-btn" onClick={showBasket}>
                     <SlBasket className="mr-1" /> <span className="max-md:hidden">Корзина</span>{" "}
                     <span className="header__basket-count">2</span>
                   </button>
@@ -145,6 +154,6 @@ const Header = () => {
       </header>
     </>
   );
-};
+}
 
-export default Header;
+export default observer(Header);
