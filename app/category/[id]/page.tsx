@@ -16,6 +16,7 @@ const Page = ({ params }: CategoryItemPageProps) => {
         <div className="categoryItem">
             <Container>
                 {/* header section */}
+                {/*@ts-ignore*/}
                 <Header id={id} />
 
                 <main className="categoryItem__main">
