@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ContainerProps {
   children: React.ReactNode;
   className?: string;
@@ -23,5 +25,6 @@ export interface CategoryItemProps {
 
 export enum ModalOption {
   none,
-  basket  
+  basket  ,
+  clicked
 }

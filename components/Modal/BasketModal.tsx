@@ -50,7 +50,6 @@ const BasketModal = () => {
                     <BasketCard />
                 </div>
 
-
                 <div className="modalBasket__bottom-container">
                     <p className={'modalBasket__price'}>
                         Жәми буйыртпалар суммасы: <b>228,500</b> сум

@@ -1,8 +1,10 @@
 import Basket from './BasketModal'
+import Clicked from './ClickedModal'
 
 
 const Modal = {
-    Basket
+    Basket,
+    Clicked
 };
 
 export default Modal;
