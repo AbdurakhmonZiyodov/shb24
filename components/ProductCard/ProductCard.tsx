@@ -2,16 +2,25 @@
 import useCounter from "@/hooks/useCounter";
 import Image from "next/image";
 
-import { FaPlus, FaMinus } from 'react-icons/fa'
+import {observer} from 'mobx-react-lite'
+import {FaMinus, FaPlus} from 'react-icons/fa'
+import useRootStore from "@/hooks/useRootStore";
+import {useCallback} from "react";
+import {ModalOption} from "@/types";
 
 const ProductCard = () => {
 
     const { increment, decrement, count } = useCounter(1)
+    const {run} = useRootStore().modal;
+    
+    const showClickedModal = useCallback(() => {
+        run(ModalOption.clicked)
+    }, [run])
     return (
         <div className="i__prodct">
             <div>
                 <span className="i__product-badge">-11%</span>
-                <Image className="object-contain my-4" src="/potatoes.jpeg" alt="prodct card" width={150} height={150} />
+                <Image onClick={showClickedModal} className="object-contain my-4" src="/potatoes.jpeg" alt="prodct card" width={150} height={150} />
                 <h4 className="i__product-title">Миф автомат 400 гр</h4>
                 <span className="i__product-price">
                     <del>9,000 сум</del>
@@ -38,4 +47,4 @@ const ProductCard = () => {
     )
 }
 
-export default ProductCard;
+export default observer(ProductCard);

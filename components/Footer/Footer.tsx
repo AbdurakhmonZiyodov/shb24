@@ -102,6 +102,7 @@ const Footer = () => {
       </div>
 
       <Modal.Basket />
+      <Modal.Clicked />
     </div>
   );
 };

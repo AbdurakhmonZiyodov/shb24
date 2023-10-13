@@ -1,9 +1,11 @@
+
+/* Modal Basket styles */
 .modalBasket {
     @apply transition-all duration-300 ease-in-out opacity-0 translate-x-full fixed z-50 left-0 right-0 top-0 bottom-0  flex justify-end;
 }
 
 .modalBasket__active {
-    @apply translate-x-0 opacity-100 backdrop-blur-sm bg-black/30;
+    @apply translate-x-0 opacity-100 backdrop-blur-sm;
 }
 
 .modalBasket__container {
@@ -65,4 +67,43 @@
 
 .modalBasket__bottom-btn {
     @apply cursor-pointer flex items-center justify-center h-[45px] bg-my-green text-white font-extrabold text-sm uppercase;
+}
+
+
+/* Modal Clicked styles */
+
+.modalClicked {
+    @apply justify-center items-center;
+}
+
+.modalClicked__container {
+    @apply bg-white p-4 shadow-2xl rounded relative sm:w-[540px] md:w-[600px] pb-7;
+}
+
+.modalClicked__title {
+    @apply font-bold text-[14px] text-slate-900 border-b pb-5;
+}
+
+.modalClicked__main-section {
+    @apply flex flex-col py-3 sm:flex-row;
+}
+
+.modalClicked__main-info {
+    @apply flex flex-col items-start justify-evenly;
+}
+
+.modalClicked__main-type {
+    @apply text-white text-xs bg-[#777777] py-[3px] px-2 rounded-full font-bold my-4;
+}
+
+.modalClicked__main-name {
+    @apply text-sm font-normal;
+}
+
+.modalClicked__main-price {
+    @apply text-base font-bold my-4;
+}
+
+.modalClicked__close-btn {
+    @apply absolute -right-5 -top-5 cursor-pointer;
 }

@@ -6,11 +6,20 @@ import {observer} from 'mobx-react-lite'
 import Image from 'next/image'
 import {AiOutlineClose, AiOutlineRight} from 'react-icons/ai'
 import {FaMinus, FaPlus} from 'react-icons/fa'
-import {useCallback} from "react";
+import {useCallback, useEffect} from "react";
 
 const BasketModal = () => {
     const { type, run } = useRootStore().modal;
     const isVisible = type === ModalOption.basket;
+    
+    useEffect(() => {
+       const bodyElement = document.querySelector('body');
+        if(type !== ModalOption.none) {
+            bodyElement?.classList?.add('overflow-hidden')
+        }else {
+            bodyElement?.classList?.remove('overflow-hidden')
+        }
+    }, [type])
     
     const hideModal = useCallback(() => {
          run(ModalOption.none)
