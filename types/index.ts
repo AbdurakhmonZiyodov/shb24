@@ -6,25 +6,37 @@ export interface ContainerProps {
 }
 
 export interface AdvertisementCarouselItem {
-  id:number;
-  imgUrl:string;
+  id: number;
+  imgUrl: string;
 }
 export interface AdvertisementCarouselProps {
-  data:AdvertisementCarouselItem[];
+  data: AdvertisementCarouselItem[];
 }
 
 export interface CategoryItemPageProps {
   params: {
-        id: string;
-    }
+    id: string;
+  };
 }
 
 export interface CategoryItemProps {
-  id?:string | number;
+  id?: string | number;
 }
 
 export enum ModalOption {
   none,
-  basket  ,
-  clicked
+  basket,
+  clicked,
+}
+
+export interface ProductType {
+  code: string;
+  name: string;
+  category: string;
+  qty: string;
+  meashure: string;
+  price: string;
+  actual: string;
+  addOn: string;
+  barcode: string;
 }
